@@ -1,22 +1,19 @@
 
 const eqArrays = (arr1, arr2) => {
 
-  let arrEquality = true;
 
   if (Array.isArray(arr1) && Array.isArray(arr2) && arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] !== arr2[i]) {
-        console.log(`Array1 value: ${arr1[i]}, Array1 type: ${typeof arr1[i]}`);
-        console.log(`Array2 value: ${arr2[i]}, Array2 type: ${typeof arr2[i]}`);
-        console.log(`Sorry these values/types don't match at index ${i}`);
-        arrEquality = false;
+        console.log(`Sorry these arrays don't match at index ${i}`);
+        return false;
       } else {
         console.log(`Both value and type are the same at index ${i}`);
       }
     }
   }
 
-  return arrEquality;
+  return true;
 };
 
 
