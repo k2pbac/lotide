@@ -2,9 +2,11 @@
 const assertEqual = function(actual, expected) {
   let equal = false;
 
+
   for (let el of actual) {
     if (!expected.includes(el)) {
       equal = false;
+      break;
     } else {
       equal = true;
     }
