@@ -1,23 +1,19 @@
 
 const eqArrays = (arr1, arr2) => {
-
-  let arrEquality = false;
   
   if (Array.isArray(arr1) && Array.isArray(arr2) && arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] !== arr2[i]) {
-        console.log(`Array1 value: ${arr1[i]}, Array1 type: ${typeof arr1[i]}`);
-        console.log(`Array2 value: ${arr2[i]}, Array2 type: ${typeof arr2[i]}`);
-        console.log(`Sorry these values/types don't match at index ${i}`);
-        arrEquality = false;
+        console.log(`Sorry these arrays don't match at index ${i}`);
+        return false;
       } else {
         console.log(`Both value and type are the same at index ${i}`);
-        arrEquality = true;
       }
     }
+    return true;
   }
 
-  return arrEquality;
+  return false;
 };
 
 
@@ -50,10 +46,12 @@ const without = (source , itemsToRemove) => {
     }
  
   }
+  console.log(newArr);
   return newArr;
 };
 
+
 console.log(assertArraysEqual(without([1,2,3], [1,2]), [3])); // should be [3];
 console.log(assertArraysEqual(without(['bob', 'Bob', 'Mirror', 'MirRor'], ['bob','Mirror']), ['Bob','MirRor']));
-console.log(assertArraysEqual(without([1,2,3], [1]), [3])); // should be [3];
+console.log(assertArraysEqual(without([1,2,3], [1]), [3])); // should be [2,3] FAIL;
 console.log(assertArraysEqual(without(['bob', 'Bob', 'Mirror', 'MirRor'], ['bob','Mirror']), ['Bob','Mirror']));

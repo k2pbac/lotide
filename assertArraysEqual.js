@@ -11,9 +11,10 @@ const eqArrays = (arr1, arr2) => {
         console.log(`Both value and type are the same at index ${i}`);
       }
     }
+    return true;
   }
 
-  return true;
+  return false;
 };
 
 
