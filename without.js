@@ -46,7 +46,6 @@ const without = (source , itemsToRemove) => {
     }
  
   }
-  console.log(newArr);
   return newArr;
 };
 
