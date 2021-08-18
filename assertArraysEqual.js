@@ -55,8 +55,8 @@ const assertArraysEqual = (actual, expected) => {
 };
 
 console.log(assertArraysEqual([1,2,3], ['1',2,3]));
-// console.log(assertArraysEqual([1,2,3], [1,2,3]));
+console.log(assertArraysEqual([1,2,3], [1,2,3]));
 
-// console.log(assertArraysEqual([1,2,3], [3,2,1]));
-// console.log(assertArraysEqual(['2',2,3], ['1',{hello: 1, bye: 2},3]));
+console.log(assertArraysEqual([1,2,3], [3,2,1]));
+console.log(assertArraysEqual(['2',2,3], ['1',{hello: 1, bye: 2},3]));
 
