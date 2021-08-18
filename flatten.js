@@ -30,7 +30,7 @@ const assertArraysEqual = (actual, expected) => {
 
 
 const flatten = (arr) => {
-  let newArr = [];
+  const newArr = [];
   const recArray = (arr) => {
 
     if (Array.isArray(arr) && arr.length) {
