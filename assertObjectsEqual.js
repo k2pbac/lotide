@@ -1,17 +1,35 @@
-const exp = require('constants');
+
 
 const eqObjects = function(actual, expected) {
-  if (typeof actual === 'object' && typeof expected === 'object' && !Array.isArray(actual) && !Array.isArray(expected)) {
-    for (let el in actual) {
-      if (actual[el] !== expected[el]) {
-        return false;
+
+  let actualKeys = Object.keys(actual);
+
+  if (Object.keys(expected).length === Object.keys(actual).length) {
+
+    if (typeof actual === 'object' && typeof expected === 'object' && !Array.isArray(actual) && !Array.isArray(expected)) {
+   
+      for (let key of actualKeys) {
+        if (Object.prototype.hasOwnProperty.call(expected, key)) {
+          if (expected[key] !== actual[key] && !Array.isArray(expected[key]) && !Array.isArray(actual[key])) {
+            return false;
+          } else if (expected[key] !== actual[key] && Array.isArray(expected[key]) && Array.isArray(actual[key])) {
+            for (let el of actual[key]) {
+              if (!expected[key].includes(el)) {
+                return false;
+              }
+            }
+          }
+        }
       }
+      return true;
+    } else {
+      return false;
     }
-    return true;
   } else {
     return false;
   }
 };
+
 
 
 // FUNCTION IMPLEMENTATION
@@ -25,6 +43,13 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-console.log(assertObjectsEqual({person: "jim", age: 24}, {person: "jimmy", age: 23})); //Should fail
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+console.log(assertObjectsEqual(cd, dc)); // => true
 
-console.log(assertObjectsEqual({apple: 3, orange: 4, banana: 5}, {apple: 3, orange: 4, banana: 5})); //Should pass
+
+
+
+// console.log(assertObjectsEqual({person: "jim", age: 24}, {person: "jimmy", age: 23})); //Should fail
+
+// console.log(assertObjectsEqual({apple: 3, orange: 4, banana: 5}, {apple: 3, orange: 4, banana: 5})); //Should pass
