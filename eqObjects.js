@@ -29,6 +29,6 @@ const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 console.log(eqObjects(cd, dc)); // => true
 
-// console.log(eqObjects({person: "jim", age: 24}, {person: "jimmy", age: 23})); //Should fail
+console.log(eqObjects({person: "jim", age: 24}, {person: "jimmy", age: 23})); //Should fail
 
-// console.log(eqObjects({apple: 3, orange: 4, banana: 5}, {apple: 3, orange: 4, banana: 5})); //Should pass
+console.log(eqObjects({apple: 3, orange: 4, banana: 5}, {apple: 3, orange: 4, banana: 5})); //Should pass

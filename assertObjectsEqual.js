@@ -50,6 +50,6 @@ console.log(assertObjectsEqual(cd, dc)); // => true
 
 
 
-// console.log(assertObjectsEqual({person: "jim", age: 24}, {person: "jimmy", age: 23})); //Should fail
+console.log(assertObjectsEqual({person: "jim", age: 24}, {person: "jimmy", age: 23})); //Should fail
 
-// console.log(assertObjectsEqual({apple: 3, orange: 4, banana: 5}, {apple: 3, orange: 4, banana: 5})); //Should pass
+console.log(assertObjectsEqual({apple: 3, orange: 4, banana: 5}, {apple: 3, orange: 4, banana: 5})); //Should pass
