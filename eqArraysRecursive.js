@@ -23,6 +23,7 @@ const eqArrays = function (array1, array2) {
 };
 
 console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])); // => true
+console.log(eqArrays([[2, 3], [4]], [[2, 4], [4]])); // => true
 
 console.log(
   eqArrays(
