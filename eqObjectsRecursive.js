@@ -1,7 +1,10 @@
 const eqObjects = function (object1, object2) {
   let keys = Object.keys(object1);
 
-  if (typeof object2[keys[0]] === "object") {
+  if (
+    typeof object2[keys[0]] === "object" &&
+    typeof object1[keys[0]] === "object"
+  ) {
     return eqObjects(object1[keys[0]], object2[keys[0]]);
   } else if (object1[keys[0]] !== object2[keys[0]]) {
     return false;
@@ -10,12 +13,13 @@ const eqObjects = function (object1, object2) {
   if (keys.length === 0) {
     return true;
   }
+
   delete object1[keys[0]];
   delete object2[keys[0]];
   return eqObjects(object1, object2);
 };
 
-// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
 
 // const cd = { c: "1", d: ["2", 3] };
 // const dc = { d: ["2", 3], c: "1" };
