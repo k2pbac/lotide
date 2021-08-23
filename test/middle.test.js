@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 const {middle} = require("../exercises/middle");
 
-describe("#tail", () => {
+describe("#middle", () => {
   it("returns [] for []", () => {
     assert.deepEqual(middle([]), []); 
   });
