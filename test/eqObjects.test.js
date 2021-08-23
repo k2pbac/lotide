@@ -1,4 +1,4 @@
-const {eqObjects} = require("../eqObjects");
+const {eqObjects} = require("../exercises/eqObjects");
 
 
 const cd = { c: "1", d: ["2", 3] };

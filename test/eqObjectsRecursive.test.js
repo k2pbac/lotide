@@ -1,4 +1,4 @@
-const {eqObjectsRecursive} = require("../eqObjectsRecursive");
+const {eqObjectsRecursive} = require("../exercises/eqObjectsRecursive");
 
 
 console.log(eqObjectsRecursive({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false

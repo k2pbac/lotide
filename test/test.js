@@ -1,4 +1,4 @@
-let check = require("../check.js");
+let check = require("../exercises/check.js");
 var expect = require("chai").expect;
 let assert = require("chai").assert;
 

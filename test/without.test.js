@@ -1,5 +1,5 @@
-const {without} = require("../without");
-const {assertArraysEqual} = require("../assertArraysEqual");
+const {without} = require("../exercises/without");
+const {assertArraysEqual} = require("../exercises/assertArraysEqual");
 
 
 console.log(assertArraysEqual(without([1,2,3], [1,2]), [3])); // should be [3];

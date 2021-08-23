@@ -1,5 +1,5 @@
-const {assertEqual} = require("../assertEqual");
-const {findKey} = require("../findKey");
+const {assertEqual} = require("../exercises/assertEqual");
+const {findKey} = require("../exercises/findKey");
 
 
 assertEqual(findKey({

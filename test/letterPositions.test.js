@@ -1,5 +1,5 @@
-const {assertObjectsEqual} = require("../assertObjectsEqual");
-const {letterPositions} = require("../letterPositions");
+const {assertObjectsEqual} = require("../exercises/assertObjectsEqual");
+const {letterPositions} = require("../exercises/letterPositions");
 
 console.log(assertObjectsEqual(letterPositions("hello"), {h: [0], e: [1], l: [2, 3], o: [4]})); //Should pass
 console.log(assertObjectsEqual(letterPositions("lighthouse in the house"), {

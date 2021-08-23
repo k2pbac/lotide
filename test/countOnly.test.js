@@ -1,5 +1,5 @@
-const {countOnly} = require("../countOnly");
-const{assertArraysEqual} = require("../assertArraysEqual");
+const {countOnly} = require("../exercises/countOnly");
+const{assertArraysEqual} = require("../exercises/assertArraysEqual");
 
 const firstNames = [
   "Karl",

@@ -1,5 +1,5 @@
-const {countLetters} = require("../countLetters");
-const {assertObjectsEqual} = require("../assertObjectsEqual");
+const {countLetters} = require("../exercises/countLetters");
+const {assertObjectsEqual} = require("../exercises/assertObjectsEqual");
 
 
 console.log(assertObjectsEqual(countLetters("I Like to eat at Burger King"), {i: 3, l: 1, k: 2, e: 3, t: 3, o: 1, a: 2, b: 1, u: 1, r: 2, g: 2, n: 1})); // Should pass tests

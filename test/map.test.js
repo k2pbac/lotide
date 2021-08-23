@@ -1,5 +1,5 @@
-const {map } = require("../map");
-const {eqArraysRecursive} = require("../eqArraysRecursive");
+const {map } = require("../exercises/map");
+const {eqArraysRecursive} = require("../exercises/eqArraysRecursive");
 
 const words = ["ground", "control", "to", "major", "tom"];
 

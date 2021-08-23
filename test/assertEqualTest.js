@@ -1,5 +1,5 @@
 
-const assertEqual = require("../assertEqual");
+const assertEqual = require("../exercises/assertEqual");
 
 console.log(assertEqual("here", "here", true)); // => true
 console.log(assertEqual("The bark tree", "The bark trees", false)); // => false

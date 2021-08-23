@@ -1,5 +1,5 @@
-const {assertEqual} = require("../assertEqual");
-const{tail} =require("../tail");
+const {assertEqual} = require("../exercises/assertEqual");
+const{tail} =require("../exercises/tail");
 
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);

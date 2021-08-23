@@ -1,5 +1,5 @@
-const {assertEqual }= require("../assertEqual");
-const {head} = require("../head");
+const {assertEqual }= require("../exercises/assertEqual");
+const {head} = require("../exercises/head");
 
 assertEqual(head([5,6,7]), 5); // returns true
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); // returns true

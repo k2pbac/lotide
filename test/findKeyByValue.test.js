@@ -1,5 +1,5 @@
-const {assertArraysEqual} = require("../assertArraysEqual");
-const {findKeyByValue} = require("../findKeyByValue");
+const {assertArraysEqual} = require("../exercises/assertArraysEqual");
+const {findKeyByValue} = require("../exercises/findKeyByValue");
 
 const bestTVShowsByGenre = {
   "sci_fi": "The Expanse",

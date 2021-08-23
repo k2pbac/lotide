@@ -1,4 +1,4 @@
-const {eqArraysRecursive} = require("../eqArraysRecursive");
+const {eqArraysRecursive} = require("../exercises/eqArraysRecursive");
 
 
 console.log(eqArraysRecursive([[2, 3], [4]], [[2, 3], [4]])); // => true
