@@ -1,16 +1,20 @@
-const {assertArraysEqual} = require("../exercises/assertArraysEqual");
+const assert = require('chai').assert;
 const {middle} = require("../exercises/middle");
 
-console.log(assertArraysEqual(middle([]), []));
-
-
-console.log(assertArraysEqual(middle([1, 2, 3]), [2])); // => [2] - Should pass
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5]), [5])); // => [3] - Should fail
-
-
-console.log(assertArraysEqual(middle([1, 2, 3, 4]), [2,3])); // => [2, 3] - Should pass
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3,4])); // => [1, 4] - Should fail
-
-
-console.log(assertArraysEqual(middle([1,2,4,"hello","abc",8]), [4, "hello"])); // => [4, "hello"] Should pass
-console.log(assertArraysEqual(middle([{person: "Jerry", age: 25}, {person: "Manny", age: 25}, {person: "Kris", age: 99}]), [{person: "Manny", age: 25}])); // => [{person: "Manny", age: 25}] should Fail because different address for reference in memory to object
+describe("#tail", () => {
+  it("returns [] for []", () => {
+    assert.deepEqual(middle([]), []); 
+  });
+  it("returns [2] for [1, 2, 3]", () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+  it("returns [3] for [1, 2, 3, 4, 5]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]); 
+  });
+  it("returns [2,3] for [1, 2, 3, 4]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4]), [2,3]); 
+  });
+  it("returns [4, 'hello']  for [1,2,4,'hello','abc',8]", () => {
+    assert.deepEqual(middle([1,2,4,"hello","abc",8]), [4, 'hello'])
+  });
+});
