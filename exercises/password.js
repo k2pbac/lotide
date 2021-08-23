@@ -30,4 +30,6 @@ const obfuscatePassword = () => {
   return strongPass;
 };
 
-console.log(obfuscatePassword());
+module.exports = {
+  obfuscatePassword
+}
