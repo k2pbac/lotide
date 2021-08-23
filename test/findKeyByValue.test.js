@@ -2,7 +2,7 @@ const {findKeyByValue} = require("../exercises/findKeyByValue");
 const assert = require("chai").assert;
 
 
-describe("#letterPositions", () => {
+describe("#findKeyByValue", () => {
   it("returns 'drama' for (bestTVShowsByGenre, 'The Wire')", () => {
     assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"); 
   });

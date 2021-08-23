@@ -1,7 +1,7 @@
 const {eqObjects} = require("../exercises/eqObjects");
 const assert = require("chai").assert;
 
-describe("#middle", () => {
+describe("#eqObjects", () => {
   it("returns true for (cd, dc)", () => {
     assert.isTrue(eqObjects(cd, dc)); 
   });
