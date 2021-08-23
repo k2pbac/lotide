@@ -1,34 +1,22 @@
 const {eqObjects} = require("../exercises/eqObjects");
+const assert = require("chai").assert;
+
+describe("#middle", () => {
+  it("returns true for (cd, dc)", () => {
+    assert.isTrue(eqObjects(cd, dc)); 
+  });
+  it("returns false for ({ person: jim, age: 24 }, { person: jimmy, age: 23 })", () => {
+    assert.isTrue(!eqObjects({ person: "jim", age: 24 }, { person: "jimmy", age: 23 }));
+  });
+  it("returns true for { apple: 3, orange: 4, banana: 5 }, { apple: 3, orange: 4, banana: 5 }", () => {
+    assert.isTrue(eqObjects({ apple: 3, orange: 4, banana: 5 }, { apple: 3, orange: 4, banana: 5 })); 
+  });
+  it("returns false for { a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }", () => {
+    assert.isTrue(!eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); 
+  });
+});
+
 
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc)); // => true
-
-console.log(
-  eqObjects({ person: "jim", age: 24 }, { person: "jimmy", age: 23 })
-); //Should fail
-
-console.log(
-  eqObjects(
-    { apple: 3, orange: 4, banana: 5 },
-    { apple: 3, orange: 4, banana: 5 }
-  )
-); //Should pass
-
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true - > not recursive
-console.log(
-  eqObjects(
-    {
-      a: { z: 1, d: { j: { x: 3, yd: { more: 23, layers: { hello: 23 } } } } },
-      b: 2,
-    },
-    {
-      a: { z: 1, d: { j: { x: 3, yd: { more: 23, layers: { hello: 23 } } } } },
-      b: 2,
-    }
-  )
-); // => true
-
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
